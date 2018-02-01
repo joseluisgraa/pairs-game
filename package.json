@@ -1,0 +1,22 @@
+{
+  "name": "pairs-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseluisgraa/pairs-game.git"
+  },
+  "author": "Jose Luis Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joseluisgraa/pairs-game/issues"
+  },
+  "homepage": "https://github.com/joseluisgraa/pairs-game#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
