@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+var liveReload = require('connect-livereload')();
+
+app.use(liveReload);
 
 // Define the port to run on
 app.set('port', 3000);

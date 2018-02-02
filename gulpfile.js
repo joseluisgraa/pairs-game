@@ -9,8 +9,16 @@ gulp.task('express', ['build'], function () {
     var server = gls.new('config/server.js');
     server.start();
 
+    gulp.watch(['build/**/*'], function (file) {
+        server.notify.apply(server, [file]);
+    });
+
     // Restart the server when file changes
-    //gulp.watch(['src/**/*'], server.notify);
+    //gulp.watch(['build/**/*'], server.notify);
+});
+
+gulp.task('watch', ['build'], function () {
+    gulp.watch(['src/**/*'], ['build']);
 });
 
 gulp.task('build', ['sass'], function(){
@@ -30,8 +38,6 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-// define tasks here
-gulp.task('default', function(){
-    // run tasks here
-    // set up watch handlers here
-});
+gulp.task('run', ['watch', 'express']);
+
+
