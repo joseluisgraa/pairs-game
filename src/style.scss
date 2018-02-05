@@ -5,13 +5,20 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: aliceblue;
+  margin: 2.5%;
+  overflow: hidden;
+}
+
+.pairs-board {
+  font-size: 3em;
+  text-align: center;
 }
 
 .col-md-2 {
   border: 1px solid white;
   color: white;
   background-color: blueviolet;
-  height: 20vh; /* 20% of viewport height*/
+  height: 18vh; /* 20% of viewport height*/
 }
 
 .col-sm-4 {
