@@ -1,12 +1,13 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
+$margin: 2.5%;
+$card-border-width: 2px;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
   background-color: aliceblue;
-  margin: 2.5%;
-  overflow: hidden;
+  margin: $margin;
 }
 
 .pairs-board {
@@ -14,13 +15,21 @@ body {
   text-align: center;
 }
 
-.col-md-2 {
-  border: 1px solid white;
+.row {
+  //height: 18vh; /* 18% of viewport height*/
   color: white;
-  background-color: blueviolet;
-  height: 18vh; /* 20% of viewport height*/
+  border: 2px solid lightcoral;
 }
 
-.col-sm-4 {
-  //height: 10vh; /* 20% of viewport height*/
+.col-sm-2 {
+  border: $card-border-width solid beige;
+  background-color: mediumpurple;
+  padding: calc(95%/12 - #{$card-border-width}*12);
 }
+
+//If I wanted to overwrite something for all column classes
+/*[class*="col-"]{
+  border: $card-border-width solid beige;
+  background-color: mediumpurple;
+  padding: calc(95%/12 - #{$card-border-width}*12);
+}*/
