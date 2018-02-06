@@ -13,6 +13,7 @@ body {
 .pairs-board {
   font-size: 3em;
   text-align: center;
+  perspective: 1000px; //for 3D effects
 }
 
 .row {
@@ -32,4 +33,46 @@ body {
   border: $card-border-width solid beige;
   background-color: mediumpurple;
   padding: calc(95%/12 - #{$card-border-width}*12);
+}*/
+
+.pair-card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-class {
+  //Rotating
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.front {
+  position: absolute;
+}
+.back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: mediumpurple;
+}
+
+/*
+!* hide back of pane during swap *!
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+!* back, initially hidden pane *!
+.back {
+  transform: rotateY(180deg);
 }*/
